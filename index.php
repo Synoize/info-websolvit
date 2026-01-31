@@ -26,7 +26,7 @@
     <?php
     require_once("./config.php");
     include_file("components/header.php");
-    include_file("components/main.php");
+    include_file("main/main.php");
     include_file("components/mobile_menu.php");
     include_file("components/footer.php");
     include_file("components/floating_aside.php");

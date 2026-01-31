@@ -43,16 +43,18 @@ $projects = [
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
-        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-red-primary mb-8">Our Work's</h2>
+        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">Our Work's</h2>
 
 
         <!-- Filters -->
-        <div class="flex flex-wrap gap-3 mb-8">
-            <button class="filterBtn active-filter" data-filter="all">All</button>
-            <button class="filterBtn" data-filter="website">Website</button>
-            <button class="filterBtn" data-filter="seo">SEO</button>
-            <button class="filterBtn" data-filter="graphic">Graphic</button>
-            <button class="filterBtn" data-filter="marketing">Marketing</button>
+        <div class="flex w-full mb-8">
+            <button class="filterBtn active-filter mr-3" data-filter="all">All</button>
+            <div class="flex-1 overflow-x-auto flex gap-3 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                <button class="filterBtn" data-filter="website">Website</button>
+                <button class="filterBtn" data-filter="seo">SEO</button>
+                <button class="filterBtn" data-filter="graphic">Graphic</button>
+                <button class="filterBtn" data-filter="marketing">Marketing</button>
+            </div>
         </div>
 
         <!-- Projects -->
@@ -106,48 +108,49 @@ $projects = [
         border-radius: 9999px;
         font-size: 14px;
         font-weight: 600;
-        background: #f3f4f6;
-        color: #000;
+        background: #9ca3af10;
+        color: #404040;
         transition: all 0.3s;
     }
 
     .filterBtn:hover {
-        background: #000;
+        background: #a72a2177;
         color: #fff;
+        cursor: pointer;
     }
 
     .active-filter {
-        background: #000;
+        background: #a72b2190;
         color: #fff;
     }
 </style>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
 
-    const filterButtons = document.querySelectorAll(".filterBtn");
-    const projectItems = document.querySelectorAll(".projectItem");
+        const filterButtons = document.querySelectorAll(".filterBtn");
+        const projectItems = document.querySelectorAll(".projectItem");
 
-    filterButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
 
-        // active button
-        filterButtons.forEach(b => b.classList.remove("active-filter"));
-        btn.classList.add("active-filter");
+                // active button
+                filterButtons.forEach(b => b.classList.remove("active-filter"));
+                btn.classList.add("active-filter");
 
-        const filter = btn.dataset.filter;
+                const filter = btn.dataset.filter;
 
-        projectItems.forEach(item => {
-          const category = item.dataset.category;
+                projectItems.forEach(item => {
+                    const category = item.dataset.category;
 
-          if (filter === "all" || category === filter) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
+                    if (filter === "all" || category === filter) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+
+            });
         });
 
-      });
     });
-
-  });
 </script>

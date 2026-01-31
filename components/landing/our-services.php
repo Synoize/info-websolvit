@@ -103,7 +103,7 @@ $services = [
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
-        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-red-primary mb-8">
+        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">
             Our Services
         </h2>
 

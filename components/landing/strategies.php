@@ -12,7 +12,7 @@
         <div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-6">
             <!-- Heading -->
             <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-5xl font-bold text-red-primary">
+                <h2 class="text-3xl md:text-5xl font-bold text-black-secondary">
                     Business Growth
                 </h2>
                 <p class="text-xl md:text-3xl font-semibold text-red-secondary mt-4">
@@ -41,7 +41,7 @@
                     <div class="flex flex-col md:flex-row gap-2 p-6 rounded-2xl border !bg-white">
                         <div class="text-2xl">🏆</div>
                         <div>
-                            <h3 class="text-lg font-semibold !text-black">
+                            <h3 class="text-lg font-semibold text-black-secondary">
                                 Top-Rated Digital Marketing Company
                             </h3>
                             <p class="text-sm text-black-secondary mt-1">
@@ -52,9 +52,9 @@
 
                     <!-- Card 2 -->
                     <div class="flex flex-col md:flex-row gap-2 p-6 rounded-2xl border !bg-white">
-                        <div class="text-yellow-500 text-2xl">⭐</div>
+                        <div class="text-2xl">⭐</div>
                         <div>
-                            <h3 class="text-lg font-semibold !text-black">
+                            <h3 class="text-lg font-semibold text-black-secondary">
                                 Delivering Smart Digital Solutions
                             </h3>
                             <p class="text-sm text-black-secondary mt-1">
