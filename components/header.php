@@ -11,7 +11,7 @@
 
     <!-- Logo -->
     <a href="<?= url('/'); ?>">
-      <img src="<?= asset('public/logo.png'); ?>" alt="Websolvit Digital Marketing Agency" class="h-10 md:h-12">
+      <img src="<?= asset('assets/logo.png'); ?>" alt="Websolvit Digital Marketing Agency" class="h-10 md:h-12">
     </a>
 
     <!-- Menu -->
