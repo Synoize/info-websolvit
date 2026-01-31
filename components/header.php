@@ -10,7 +10,7 @@
   <div class="h-18 md:h-20 flex items-center justify-between px-4 md:px-[5%] py-3">
 
     <!-- Logo -->
-    <a href="<?= url('/'); ?>">
+    <a href="<?= url(''); ?>">
       <img src="<?= asset('public/logo.png'); ?>" alt="Websolvit" class="h-10 md:h-12">
     </a>
 

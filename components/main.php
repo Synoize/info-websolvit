@@ -1,4 +1,4 @@
-<main class="mt-28 md:mt-30 md:mb-0">
+<main class="">
     <!-- Hero Section Start -->
     <?php include 'components/landing/hero-section.php' ?>
     <!-- Hero Section End-->

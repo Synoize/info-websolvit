@@ -145,7 +145,7 @@
   <div class="pt-6 pb-20">
     <div class="flex flex-col lg:flex-row items-center lg:justify-between gap-6">
 
-      <img src="<?= asset('publicc/logo-footer.png'); ?>" alt="Websolvit" class="w-24">
+      <img src="<?= asset('public/logo-footer.png'); ?>" alt="Websolvit" class="w-24">
 
       <div class="text-center text-xs text-white-secondary">
         © <?= date("Y"); ?> WEBSOLVIT. All Rights Reserved.
