@@ -35,7 +35,7 @@ $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https:
 $host = $_SERVER['HTTP_HOST'] ?? "localhost";
 // $projectFolder = "websolvit";
 
-define("BASE_URL", $protocol . $host . "/" . $host);
+define("BASE_URL", $protocol . $host . "/" );
 
 // 5) COMMON HELPERS
 
