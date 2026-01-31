@@ -33,7 +33,7 @@ define("ROOT_PATH", __DIR__);
 // Example result: http://localhost/websolvit
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https://" : "http://";
 $host = $_SERVER['HTTP_HOST'] ?? "localhost";
-$projectFolder = "websolvit";
+$projectFolder = "";
 
 define("BASE_URL", $protocol . $host . "/" . $projectFolder);
 
