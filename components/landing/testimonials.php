@@ -1,7 +1,7 @@
 <?php
 $testimonials = [
   [
-    "quote" => "As a business owner, I needed a marketing partner who understood performance, not just impressions. The team helped us build a scalable digital strategy that consistently generates high-quality leads and measurable ROI.",
+    "quote" => "The team helped us build a performance-driven digital strategy that delivers consistent leads and real ROI.",
     "name" => "Jitesh Sanekar",
     "image" => "assets/testimonials/_1.png",
     "social_links" => [
@@ -11,7 +11,7 @@ $testimonials = [
     ]
   ],
   [
-    "quote" => "Our SEO and paid advertising campaigns started delivering tangible results within the first few weeks. From keyword strategy to conversion optimization, every decision was data-driven and focused on growth.",
+    "quote" => "Our SEO and paid campaigns started showing strong results within weeks, all backed by clear data and insights.",
     "name" => "Jitesh Sanekar",
     "image" => "assets/testimonials/_1.png",
     "social_links" => [
@@ -21,7 +21,7 @@ $testimonials = [
     ]
   ],
   [
-    "quote" => "What sets this agency apart is clarity and execution. We saw improved brand visibility, stronger engagement, and a clear increase in customer acquisition across multiple digital channels.",
+    "quote" => "Clear strategy, strong execution, and measurable growth across multiple digital channels.",
     "name" => "Jitesh Sanekar",
     "image" => "assets/testimonials/_1.png",
     "social_links" => [

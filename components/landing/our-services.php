@@ -99,12 +99,12 @@ $services = [
 ];
 ?>
 <!-- Our Service's Section Start -->
-<section class="w-full !bg-white md:pt-20 py-12">
+<section class="w-full !bg-white py-6 ">
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
         <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">
-            Our Services
+            Our <span class="text-red-secondary">Services</span>
         </h2>
 
         <!-- Filters -->

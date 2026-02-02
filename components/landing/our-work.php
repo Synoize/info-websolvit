@@ -39,17 +39,17 @@ $projects = [
 ?>
 
 <!-- Best Sellers Section Start -->
-<section class="w-full !bg-white py-6">
+<section class="w-full !bg-white md:pt-20 py-12">
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
-        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">Our Work's</h2>
+        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">Our <span class="text-red-secondary">Work's</span></h2>
 
 
         <!-- Filters -->
         <div class="flex w-full mb-8">
             <button class="filterBtn active-filter mr-3" data-filter="all">All</button>
-            <div class="flex-1 overflow-x-auto flex gap-3 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <div class="flex-1 overflow-x-auto flex gap-1.5 md:gap-3 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 <button class="filterBtn" data-filter="website">Website</button>
                 <button class="filterBtn" data-filter="seo">SEO</button>
                 <button class="filterBtn" data-filter="graphic">Graphic</button>

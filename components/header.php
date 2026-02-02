@@ -1,7 +1,7 @@
 <!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
 
-  <div class="flex items-center justify-center text-center bg-red-primary text-white p-2 overflow-hidden h-10 text-xs md:text-base">
+  <div class="flex items-center justify-center text-center bg-red-primary/80 text-white p-2 overflow-hidden h-10 text-xs md:text-sm">
     <p id="announcementText"
       class="transition-all duration-500 translate-y-6 opacity-0">
     </p>

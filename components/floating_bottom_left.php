@@ -18,7 +18,7 @@
     </a>
 
     <!-- Info -->
-    <a href="#about"
+    <a href="<?= url('info'); ?>"
         class="w-10 h-10 rounded-full bg-white
             flex items-center justify-center
             shadow-lg hover:scale-105 transition-all border">

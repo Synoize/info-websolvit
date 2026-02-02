@@ -8,7 +8,7 @@
       <!-- Left Big Section -->
       <div class="lg:col-span-2">
         <h3 class="text-xl font-semibold text-black-secondary">
-          Websolvit – Your Digital Growth Partner
+          Websolvit – Digital Marketing Agency
         </h3>
         <p class="mt-4 text-sm text-black-secondary leading-6 max-w-sm">
           Websolvit is a full-service digital marketing agency helping businesses grow online through
@@ -142,10 +142,10 @@
   <div class="border-t-2 border-dashed border-secondary-black"></div>
 
   <!-- Bottom Footer -->
-  <div class="pt-6 pb-20">
+  <div class="pt-6 pb-24 md:pb-12">
     <div class="flex flex-col lg:flex-row items-center lg:justify-between gap-6">
 
-      <img src="<?= asset('public/logo-footer.png'); ?>" alt="Websolvit" class="w-24">
+      <img src="<?= asset('public/logo-footer.png'); ?>" alt="Websolvit" class="w-20">
 
       <div class="text-center text-xs text-white-secondary">
         © <?= date("Y"); ?> WEBSOLVIT. All Rights Reserved.
@@ -160,12 +160,12 @@
 
     </div>
 
-    <div class="flex justify-center mt-6">
+    <!-- <div class="flex justify-center mt-6">
       <div class="text-xs text-white-secondary flex items-center gap-2 bg-white px-4 py-2 border border-secondary-white rounded-full">
         <span>Powered by</span>
         <span class="font-semibold text-black-secondary">WEBSOLVIT</span>
       </div>
-    </div>
+    </div> -->
   </div>
 
 </footer>

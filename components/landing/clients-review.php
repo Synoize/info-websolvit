@@ -28,7 +28,7 @@ $clientsReview = [
     <div class="max-w-7xl mx-auto px-4 md:px-10">
 
         <!-- Heading -->
-        <h2 class="text-3xl md:text-5xl font-bold text-black-secondary mb-8">Client's Review</h2>
+        <h2 class="text-3xl md:text-5xl font-bold text-black-secondary mb-8">Client's <span class="text-red-secondary">Review</span></h2>
 
         <!-- Scrollable Cards -->
         <div id="reviewScroll"
