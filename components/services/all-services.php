@@ -16,6 +16,45 @@ $services = [
 
     [
         "img" => "assets/projects/websites/_1.png",
+        "title" => "Business Website",
+        "category" => "website",
+        "features" => [
+            "Corporate UI/UX Design",
+            "Service & Portfolio Pages",
+            "SEO-Optimized Structure"
+        ],
+        "off" => "25%",
+        "badge" => "Best Seller",
+    ],
+
+    [
+        "img" => "assets/projects/websites/_1.png",
+        "title" => "Web Development",
+        "category" => "development",
+        "features" => [
+            "Custom Development",
+            "Fast Loading Code",
+            "Scalable Architecture"
+        ],
+        "off" => "20%",
+        "badge" => "",
+    ],
+
+    [
+        "img" => "assets/projects/websites/_1.png",
+        "title" => "Customised Website",
+        "category" => "website",
+        "features" => [
+            "Tailor-Made Design",
+            "Custom Features",
+            "Business-Specific Layout"
+        ],
+        "off" => "35%",
+        "badge" => "High Demand",
+    ],
+
+    [
+        "img" => "assets/projects/websites/_1.png",
         "title" => "E-Commerce Website",
         "category" => "ecommerce",
         "features" => [
@@ -41,6 +80,32 @@ $services = [
     ],
 
     [
+        "img" => "assets/projects/seo/local-seo.png",
+        "title" => "Local SEO Services",
+        "category" => "seo",
+        "features" => [
+            "Local Keyword Rankings",
+            "Map Pack Optimization",
+            "Nearby Customer Reach"
+        ],
+        "off" => "30%",
+        "badge" => "Local SEO",
+    ],
+
+    [
+        "img" => "assets/projects/seo/gmb.png",
+        "title" => "Google My Business (GMB) SEO",
+        "category" => "seo",
+        "features" => [
+            "GMB Profile Setup",
+            "Local Map Rankings",
+            "Reviews & Visibility Boost"
+        ],
+        "off" => "30%",
+        "badge" => "Local SEO",
+    ],
+
+    [
         "img" => "assets/projects/marketing/social-media.png",
         "title" => "Social Media Marketing",
         "category" => "marketing",
@@ -51,6 +116,58 @@ $services = [
         ],
         "off" => "35%",
         "badge" => "High ROI",
+    ],
+
+    [
+        "img" => "assets/projects/marketing/content.png",
+        "title" => "Content Marketing",
+        "category" => "marketing",
+        "features" => [
+            "SEO Content Writing",
+            "Blogs & Website Content",
+            "Brand Storytelling"
+        ],
+        "off" => "20%",
+        "badge" => "",
+    ],
+
+    [
+        "img" => "assets/projects/marketing/email.png",
+        "title" => "Email Marketing",
+        "category" => "marketing",
+        "features" => [
+            "Promotional Campaigns",
+            "Automated Emails",
+            "High Open Rates"
+        ],
+        "off" => "15%",
+        "badge" => "",
+    ],
+
+    [
+        "img" => "assets/projects/marketing/sms.png",
+        "title" => "SMS Marketing",
+        "category" => "marketing",
+        "features" => [
+            "Bulk SMS Campaigns",
+            "Instant Customer Reach",
+            "High Conversion Rate"
+        ],
+        "off" => "20%",
+        "badge" => "",
+    ],
+
+    [
+        "img" => "assets/projects/marketing/whatsapp.png",
+        "title" => "WhatsApp Marketing",
+        "category" => "marketing",
+        "features" => [
+            "Broadcast Messaging",
+            "Automation & Follow-ups",
+            "Lead Nurturing"
+        ],
+        "off" => "25%",
+        "badge" => "Trending",
     ],
 
     [
@@ -80,6 +197,19 @@ $services = [
     ],
 
     [
+        "img" => "assets/projects/ads/ppc.png",
+        "title" => "PPC Marketing & Consulting",
+        "category" => "ppc",
+        "features" => [
+            "Campaign Optimization",
+            "Keyword & Bid Strategy",
+            "Conversion Improvement"
+        ],
+        "off" => "30%",
+        "badge" => "Expert Service",
+    ],
+
+    [
         "img" => "assets/projects/design/graphic.png",
         "title" => "Graphic Design",
         "category" => "design",
@@ -105,12 +235,38 @@ $services = [
         "badge" => "Custom Build",
     ],
 
+    [
+        "img" => "assets/projects/optimization/cro.png",
+        "title" => "Conversion Rate Optimisation (CRO)",
+        "category" => "optimization",
+        "features" => [
+            "A/B Testing",
+            "User Behaviour Analysis",
+            "Higher Conversions"
+        ],
+        "off" => "20%",
+        "badge" => "",
+    ],
+
+    [
+        "img" => "assets/projects/maintenance/site-maintenance.png",
+        "title" => "Website Maintenance",
+        "category" => "maintenance",
+        "features" => [
+            "Regular Updates",
+            "Security Monitoring",
+            "Performance Optimization"
+        ],
+        "off" => "15%",
+        "badge" => "",
+    ],
 
 ];
 ?>
 
+
 <!-- Our Service's Section Start -->
-<section class="w-full !bg-white py-6 ">
+<section class="w-full !bg-white py-12 ">
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
@@ -168,7 +324,7 @@ $services = [
                             <li class="flex items-center gap-2 text-secondary-black">
                                 <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
                                 <p class="line-clamp-1"><?= $feature; ?></p>
-                                
+
                             </li>
                         <?php } ?>
                     </ul>
@@ -185,14 +341,6 @@ $services = [
             <?php } ?>
 
         </div>
-
-        <!-- View All -->
-        <a href="<?= url('services'); ?>"
-            class="group flex items-center self-center gap-2 px-6 py-3 mt-12 rounded-full !text-white bg-red-primary/70 hover:bg-red-primary/90 transition-all duration-300">
-            <span class="text-xs">See All Services</span>
-            <i data-lucide="arrow-right"
-                class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
-        </a>
 
     </div>
 </section>

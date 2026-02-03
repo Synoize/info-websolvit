@@ -67,7 +67,7 @@ $testimonials = [
             </div>
 
             <img
-              src="<?= $item['image']; ?>"
+              src="<?= asset($item['image']); ?>"
               class="relative z-10 w-[220px] md:w-[280px] object-contain"
               alt="<?= $item['name']; ?>">
 

@@ -50,7 +50,7 @@ $clientsReview = [
                             controls
                             muted
                             preload="metadata">
-                            <source src="<?= $review['video']; ?>" type="video/mp4">
+                            <source src="<?= asset($review['video']); ?>" type="video/mp4">
                         </video>
 
                         <!-- Play Icon -->

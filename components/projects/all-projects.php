@@ -39,7 +39,7 @@ $projects = [
 ?>
 
 <!-- ourWorkScroll Section Start -->
-<section class="w-full !bg-white md:pt-20 py-12">
+<section class="w-full !bg-white py-12">
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
@@ -59,14 +59,11 @@ $projects = [
 
         <!-- Projects -->
         <div
-            id="ourWorkScroll"
-            class="grid grid-cols-2 gap-4
-             sm:flex sm:gap-6 sm:overflow-x-auto sm:scroll-smooth sm:snap-x sm:snap-mandatory sm:pb-4
-             sm:[&::-webkit-scrollbar]:hidden sm:[-ms-overflow-style:none] sm:[scrollbar-width:none]">
+            class="ourWorkScroll grid grid-cols-2 lg:grid-cols-4 gap-4">
 
             <?php foreach ($projects as $project) { ?>
                 <div
-                    class="projectItem group sm:snap-start sm:flex-shrink-0 sm:w-[280px] md:w-[320px] lg:w-[300px] relative"
+                    class="projectItem group sm:snap-start sm:flex-shrink-0 sm:w-[280px] relative"
                     data-category="<?= $project['category']; ?>">
 
                     <div class="bg-white-secondary/10 rounded-2xl overflow-hidden h-[180px] sm:h-[260px] flex items-center justify-center">
@@ -91,14 +88,6 @@ $projects = [
                 </div>
             <?php } ?>
         </div>
-
-        <a href="<?= url('projects'); ?>"
-            class="group flex items-center self-center gap-2 px-5 md:px-6 py-3 mt-12 rounded-full !text-white
-               bg-red-primary/70 hover:bg-red-primary/90 transition-all duration-300">
-            <span class="text-xs">See All Projects</span>
-            <i data-lucide="arrow-right"
-                class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
-        </a>
 
     </div>
 </section>
@@ -156,39 +145,4 @@ $projects = [
 
     });
 
-    // Horizontal scroll drag
-    let isDragging = false;
-
-    const ourWorkScroll = document.getElementById("ourWorkScroll");
-    let startX, scrollLeft;
-
-    ourWorkScroll.addEventListener("mousedown", e => {
-        isDragging = false;
-        startX = e.pageX - ourWorkScroll.offsetLeft;
-        scrollLeft = ourWorkScroll.scrollLeft;
-    });
-
-    ourWorkScroll.addEventListener("mousemove", e => {
-        if (startX === undefined) return;
-        const x = e.pageX - ourWorkScroll.offsetLeft;
-        const walk = x - startX;
-        if (Math.abs(walk) > 5) isDragging = true;
-        ourWorkScroll.scrollLeft = scrollLeft - walk;
-    });
-
-    ourWorkScroll.addEventListener("mouseup", () => {
-        startX = undefined;
-        setTimeout(() => isDragging = false, 50);
-    });
-
-    ourWorkScroll.addEventListener("mouseleave", () => {
-        startX = undefined;
-        isDragging = false;
-    });
-
-    // Mouse wheel horizontal scroll
-    ourWorkScroll.addEventListener("wheel", e => {
-        e.preventDefault();
-        ourWorkScroll.scrollLeft += e.deltaY;
-    });
 </script>

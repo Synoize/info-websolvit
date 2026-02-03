@@ -27,6 +27,7 @@
     require_once("../config.php");
     include_file("./components/header.php");
 
+    include_once("base.php");
     
     include_file("./components/mobile_menu.php");
     include_file("./components/footer.php");

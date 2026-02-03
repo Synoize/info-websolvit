@@ -23,7 +23,7 @@ $slides = [
 
             <?php foreach ($slides as $slide): ?>
                 <div class="min-w-full relative">
-                    <img src="<?= $slide['img']; ?>" class="w-full h-[260px] md:h-[85vh] object-cover">
+                    <img src="<?= asset($slide['img']); ?>" class="w-full h-[260px] md:h-[85vh] object-cover">
 
                     <div class="absolute inset-0 flex items-center">
                         <div class="p-8 md:p-20 max-w-xl h-full flex flex-col items-start justify-<?= $slide['align']; ?>">

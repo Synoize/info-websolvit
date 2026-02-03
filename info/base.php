@@ -1,7 +1,7 @@
-<main class="my-4 md:mt-16 md:mb-0">
-    <!-- About Hero Section Start -->
-    <?php include '../components/info/hero.php' ?>
-    <!-- About Hero Section End-->
+<main class="mt-4 md:mt-16 md:mb-0">
+    <!-- About Top Section Start -->
+    <?php include '../components/info/top.php' ?>
+    <!-- About Top Section End-->
 
     <!-- About Our Mission & Vision Section Start -->
     <?php include '../components/info/our-mission.php' ?>

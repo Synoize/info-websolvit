@@ -62,22 +62,14 @@ $timelineEvents = [
                 <div class="timeline-item <?= $index % 2 === 0 ? 'left' : 'right'; ?>">
                     <span class="dot"></span>
 
-                    <div class="bg-slate-50 flex flex-col md:flex-row gap-4 p-6 rounded-xl shadow-sm
-                                transition-transform duration-200 ease-out hover:-translate-y-1 will-change-transform">
+                    <div class="bg-slate-50 flex flex-col md:flex-row gap-4 p-6 rounded-xl shadow-sm transition-transform duration-200 hover:-translate-y-1">
 
                         <!-- Media -->
-                        <?php if (filter_var($event['image'], FILTER_VALIDATE_URL)): ?>
-                            <iframe
-                                src="<?= htmlspecialchars($event['image']); ?>"
-                                class="w-full md:w-1/2 h-full rounded-lg border-0"
-                                loading="lazy">
-                            </iframe>
-                        <?php else: ?>
-                            <div class="w-full md:w-1/2 h-28 flex items-center justify-center
-                                        bg-white rounded-lg font-bold text-red-secondary text-xl">
-                                <?= htmlspecialchars($event['image']); ?>
-                            </div>
-                        <?php endif; ?>
+                        <iframe
+                            src="<?= htmlspecialchars($event['image']); ?>"
+                            class="w-full md:w-1/2 h-40 md:h-48 rounded-lg border-0"
+                            loading="lazy">
+                        </iframe>
 
                         <!-- Content -->
                         <div class="flex-1">
@@ -94,122 +86,128 @@ $timelineEvents = [
         </div>
     </div>
 </section>
+
 <style>
-    .timeline {
-        position: relative;
-        max-width: 1100px;
-        margin: auto;
-    }
+.timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: auto;
+}
 
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e5e7eb;
+    transform: translateX(-50%);
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: #a72a21;
+}
+
+.timeline-comet {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #a72a21;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 30px 40px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.left { left: 0; }
+.timeline-item.right { left: 50%; }
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item .dot {
+    position: absolute;
+    top: 48px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #a72a21;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+
+.timeline-item.right .dot {
+    left: -8px;
+    right: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
     .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        width: 2px;
-        height: 100%;
-        background: #e5e7eb;
-        transform: translateX(-50%);
-    }
-
-    .timeline-progress {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 0;
-        background: #a72a21;
-        transition: height 0.2s ease-out;
-    }
-
-    .timeline-comet {
-        position: absolute;
-        left: 50%;
-        width: 14px;
-        height: 14px;
-        transform: translateX(-50%);
-        border-radius: 50%;
-        background: #fff;
-        border: 3px solid #a72a21;
+        left: 20px;
     }
 
     .timeline-item {
-        position: relative;
-        width: 50%;
-        padding: 30px 40px;
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.6s ease;
-        text-align: left;
-    }
-
-    .timeline-item.left {
-        left: 0;
-    }
-
-    .timeline-item.right {
-        left: 50%;
-    }
-
-    .timeline-item.active {
-        opacity: 1;
-        transform: translateY(0);
+        width: 100%;
+        left: 0 !important;
+        padding-left: 60px;
     }
 
     .timeline-item .dot {
-        position: absolute;
-        top: 40px;
-        right: -8px;
-        width: 16px;
-        height: 16px;
-        background: #a72a21;
-        border: 4px solid #fff;
-        border-radius: 50%;
-    }
-
-    .timeline-item.right .dot {
-        left: -8px;
+        left: 12px;
         right: auto;
     }
 
-    /* Mobile */
-    @media (max-width: 768px) {
-        .timeline-line {
-            left: 20px;
-        }
-
-        .timeline-item {
-            width: 100%;
-            left: 0 !important;
-            padding-left: 60px;
-        }
-
-        .timeline-item .dot {
-            left: 12px;
-            right: auto;
-        }
+    .timeline-item.right .dot {
+        left: 12px;
+        right: auto;
     }
+}
 </style>
+
 <script>
+document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll(".timeline-item");
     const progress = document.querySelector(".timeline-progress");
     const comet = document.querySelector(".timeline-comet");
     const timeline = document.querySelector(".timeline");
 
-    window.addEventListener("scroll", () => {
+    function updateTimeline() {
         const rect = timeline.getBoundingClientRect();
         const viewHeight = window.innerHeight;
 
-        const progressPercent = Math.min(
-            Math.max((viewHeight - rect.top) / rect.height, 0),
-            1
+        const visible = Math.min(
+            Math.max(viewHeight - rect.top, 0),
+            rect.height
         );
 
-        progress.style.height = `${progressPercent * 100}%`;
-        comet.style.top = `${progressPercent * 100}%`;
+        progress.style.height = `${visible}px`;
+        comet.style.top = `${visible}px`;
 
         items.forEach(item => {
             if (item.getBoundingClientRect().top < viewHeight * 0.8) {
                 item.classList.add("active");
             }
         });
-    });
+    }
+
+    window.addEventListener("scroll", updateTimeline);
+    updateTimeline();
+});
 </script>

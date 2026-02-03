@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Websolvit</title>
+    <title>Services | Websolvit</title>
     <link rel="icon" href="../public/favicon.svg" />
 
     <!-- Tailwind CDN -->
@@ -27,6 +27,7 @@
     require_once("../config.php");
     include_file("./components/header.php");
 
+    include_once("base.php");
     
     include_file("./components/mobile_menu.php");
     include_file("./components/footer.php");
