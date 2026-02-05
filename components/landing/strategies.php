@@ -12,12 +12,12 @@
         <div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-6">
             <!-- Heading -->
             <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-5xl font-bold text-black-secondary">
-                    Business Growth
-                </h2>
-                <p class="text-xl md:text-3xl font-semibold text-red-secondary mt-4">
+                <h4 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase tracking-wide">
+                    Business <span class="text-red-secondary">Growth</span>
+                </h4>
+                <h2 class="text-xl md:text-2xl leading-snug mt-4 text-red-secondary">
                     Through Smart Digital Strategies
-                </p>
+                </h2>
             </div>
 
             <div class="text-black-secondary text-base md:text-lg text-center md:text-left">

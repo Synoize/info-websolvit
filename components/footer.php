@@ -7,7 +7,7 @@
 
       <!-- Left Big Section -->
       <div class="lg:col-span-2">
-        <h3 class="text-xl font-semibold text-black-secondary">
+        <h3 class="text-xl font-semibold text-red-secondary">
           Websolvit – Digital Marketing Agency
         </h3>
         <p class="mt-4 text-sm text-black-secondary leading-6 max-w-sm">

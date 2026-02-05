@@ -1,9 +1,18 @@
-.no-scrollbar::-webkit-scrollbar { display: none; }
-.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+* {
+  scroll-behavior: smooth;
+}
 
 body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-

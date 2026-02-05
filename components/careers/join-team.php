@@ -2,52 +2,48 @@
 $timelineEvents = [
     [
         "image" => "https://lottie.host/embed/222e2a20-75e6-47eb-a391-8710acf26e32/vzgLl7Tg08.lottie",
-        "title" => "Website & App Design and Development",
-        "description" => "Modern, responsive websites and scalable web & mobile applications designed for performance, usability, and business growth."
+        "title" => "Work on Global Projects",
+        "description" => "Collaborate with clients and teams across different countries, gaining real-world exposure and international experience."
     ],
     [
         "image" => "https://lottie.host/embed/1b7ca0aa-8d4a-4577-ac81-33151dbfb223/jgGp3W0WSj.lottie",
-        "title" => "Search Engine Optimization (SEO)",
-        "description" => "On-page, off-page, and technical SEO strategies that improve search rankings, increase organic traffic, and drive qualified leads."
+        "title" => "Remote & Flexible Work Culture",
+        "description" => "Enjoy the freedom of remote work, flexible schedules, and a healthy work-life balance designed for productivity."
     ],
     [
         "image" => "https://lottie.host/embed/8b8bcbf4-7c55-4eb2-ad8e-823534868675/6rBSaCxA5w.lottie",
-        "title" => "Google & Facebook Ads",
-        "description" => "High-performing paid advertising campaigns on Google and Meta platforms focused on conversions, ROI, and measurable results."
+        "title" => "Continuous Learning & Growth",
+        "description" => "Upskill with hands-on projects, mentorship, and access to modern tools, technologies, and industry best practices."
     ],
     [
         "image" => "https://lottie.host/embed/1e3b0473-7fff-4e86-8497-37655ba0c8cc/uydxY92qLv.lottie",
-        "title" => "Social Media Management",
-        "description" => "Complete social media handling including content creation, posting, audience engagement, and brand growth strategies."
-    ],
-    [
-        "image" => "https://lottie.host/embed/1e3b0473-7fff-4e86-8497-37655ba0c8cc/uydxY92qLv.lottie",
-        "title" => "Influencer Marketing",
-        "description" => "Strategic influencer collaborations that build trust, expand reach, and generate authentic brand awareness."
-    ],
-    [
-        "image" => "https://lottie.host/embed/8b8bcbf4-7c55-4eb2-ad8e-823534868675/6rBSaCxA5w.lottie",
-        "title" => "Google Business Profile Setup & Optimization",
-        "description" => "Professional Google Business Profile creation and optimization to improve local visibility, reviews, and customer reach."
+        "title" => "Supportive Team Environment",
+        "description" => "Be part of a collaborative, respectful, and innovation-driven team where your ideas truly matter."
     ],
     [
         "image" => "https://lottie.host/embed/37ef486a-377e-4f2e-8da6-8cd87f581af8/X6xmgUSpF1.lottie",
-        "title" => "Complete Digital Marketing Solutions",
-        "description" => "End-to-end digital strategies combining ads, SEO, social media, and development to scale brands and maximize ROI."
+        "title" => "Career Advancement Opportunities",
+        "description" => "Clear growth paths, performance-based recognition, and opportunities to take ownership and leadership roles."
+    ],
+    [
+        "image" => "https://lottie.host/embed/8b8bcbf4-7c55-4eb2-ad8e-823534868675/6rBSaCxA5w.lottie",
+        "title" => "Impact-Driven Work",
+        "description" => "Work on meaningful products and solutions that create real value for businesses and users worldwide."
     ],
 ];
 ?>
 
-<section class="w-full py-12 md:py-20 bg-white">
+
+<section class="w-full py-6 bg-white">
     <div class="max-w-7xl mx-auto px-4 md:px-10">
 
         <!-- Heading -->
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase">
-                What We <span class="text-red-secondary">Do</span>
+                Why Join Our <span class="text-red-secondary">Global Team</span>
             </h2>
             <p class="mt-4 max-w-2xl mx-auto text-black-secondary text-base md:text-lg">
-                End-to-end digital solutions to help your business grow faster and smarter.
+                Build your career with a global-first team that values growth, flexibility, and innovation.
             </p>
         </div>
 

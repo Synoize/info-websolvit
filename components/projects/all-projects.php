@@ -1,35 +1,35 @@
 <?php
 $projects = [
     [
-        "img" => "assets/works/websites/_1.png",
+        "img" => "assets/projects/websites/_1.png",
         "title" => "Mosquito Net Business Website",
         "description" => "Responsive website designed for an Indian mosquito net manufacturer with lead-focused UI.",
         "category" => "website",
         "tags" => ["Website", "UI/UX", "Responsive"],
     ],
     [
-        "img" => "assets/works/websites/_1.png",
+        "img" => "assets/projects/websites/_1.png",
         "title" => "Local SEO Growth Project",
         "description" => "Improved Google rankings and local visibility for a service-based business.",
         "category" => "seo",
         "tags" => ["SEO", "Local SEO", "Google Ranking"],
     ],
     [
-        "img" => "assets/works/websites/_1.png",
+        "img" => "assets/projects/websites/_1.png",
         "title" => "Brand Identity & Creatives",
         "description" => "Custom social media creatives and brand design for consistent online presence.",
         "category" => "graphic",
         "tags" => ["Graphic Design", "Branding", "Creatives"],
     ],
     [
-        "img" => "assets/works/websites/_1.png",
+        "img" => "assets/projects/websites/_1.png",
         "title" => "Social Media Marketing Campaign",
         "description" => "Lead generation campaign using Instagram and Facebook ads with high ROI.",
         "category" => "marketing",
         "tags" => ["Social Media", "Ads", "Lead Generation"],
     ],
     [
-        "img" => "assets/works/websites/_1.png",
+        "img" => "assets/projects/websites/_1.png",
         "title" => "Corporate Business Website",
         "description" => "Modern corporate website focused on trust, conversions, and performance.",
         "category" => "website",
@@ -43,7 +43,15 @@ $projects = [
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
-        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">Our <span class="text-red-secondary">Work's</span></h2>
+        <div class="text-center md:text-left mb-12">
+            <h4 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase tracking-wide">
+                Our <span class="text-red-secondary">Work's</span>
+            </h4>
+
+            <h2 class="text-xl md:text-2xl leading-snug mt-4 text-black-secondary">
+                Showcasing impactful digital solutions.
+            </h2>
+        </div>
 
 
         <!-- Filters -->
@@ -72,7 +80,7 @@ $projects = [
                             alt="<?= $project['title']; ?>">
                     </div>
 
-                    <h3 class="mt-4 text-lg font-semibold !text-black line-clamp-2">
+                    <h3 class="mt-4 text-lg font-semibold !text-black line-clamp-1">
                         <?= $project['title']; ?>
                     </h3>
 
@@ -144,5 +152,4 @@ $projects = [
         });
 
     });
-
 </script>

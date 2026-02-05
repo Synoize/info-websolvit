@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto px-4 md:px-10
                 flex flex-col items-center text-center gap-6">
 
-        <h3 class="text-3xl md:text-4xl font-bold leading-tight text-balck-secondary">
+        <h3 class="text-3xl md:text-4xl max-w-xl font-semibold leading-tight text-balck-secondary uppercase tracking-wide">
             Let’s Grow Your <span class="text-red-primary/60">Business Together</span>
         </h3>
 

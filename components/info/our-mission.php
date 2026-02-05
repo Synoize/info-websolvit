@@ -3,13 +3,14 @@
 
         <div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-6">
             <!-- Heading -->
-            <div class="text-center md:text-left">
-                <h2 class="text-3xl md:text-4xl font-bold text-black-secondary">
-                    Our Mission & Vision
-                </h2>
-                <p class="text-xl md:text-2xl font-semibold text-red-secondary mt-4">
+            <div class="text-center md:text-left md:mb-4">
+                <h4 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase tracking-wide">
+                    Our <span class="text-red-secondary">Mission</span> & <span class="text-red-secondary">Vision</span>
+                </h4>
+
+                <h2 class="text-xl md:text-2xl leading-snug mt-4 text-black-secondary">
                     Building Digital Success Stories
-                </p>
+                </h2>
             </div>
             <div class="text-black-secondary text-base md:text-lg text-center md:text-left space-y-2">
                 <p>

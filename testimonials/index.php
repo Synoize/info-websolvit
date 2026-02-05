@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support | Websolvit</title>
+    <title>Client Testimonials | Websolvit</title>
     <link rel="icon" href="../public/favicon.svg" />
 
     <!-- Tailwind CDN -->
@@ -19,11 +19,13 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
+
     <!-- Loader -->
-    <?php include_once("../components/loader.php"); ?>
+    <?php include_once("../components/loader.php") ?>
 
     <!-- Page Content -->
     <div id="content" class="hidden">

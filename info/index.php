@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Websolvit</title>
+    <title>Info | Websolvit</title>
     <link rel="icon" href="../public/favicon.svg" />
 
     <!-- Tailwind CDN -->
@@ -23,22 +23,29 @@
 </head>
 
 <body>
-    <?php
-    require_once("../config.php");
-    include_file("./components/header.php");
+    <!-- Loader -->
+    <?php include_once("../components/loader.php"); ?>
 
-    include_once("base.php");
-    
-    include_file("./components/mobile_menu.php");
-    include_file("./components/footer.php");
-    include_file("./components/floating_aside.php");
-    include_file("./components/floating_bottom_left.php");
-    include_file("./components/floating_bottom_right.php");
-    ?>
+    <!-- Page Content -->
+    <div id="content" class="hidden">
+        <?php
+        require_once("../config.php");
+        include_file("./components/header.php");
+
+        include_once("base.php");
+
+        include_file("./components/mobile_menu.php");
+        include_file("./components/footer.php");
+        include_file("./components/floating_aside.php");
+        include_file("./components/floating_bottom_left.php");
+        include_file("./components/floating_bottom_right.php");
+        ?>
+    </div>
+
     <script>
         lucide.createIcons();
     </script>
-
+    <script src="../script.js"></script>
 </body>
 
 </html>

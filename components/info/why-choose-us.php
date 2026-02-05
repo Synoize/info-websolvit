@@ -3,11 +3,11 @@
 
         <!-- Left Content -->
         <div class="w-full md:w-1/2 flex flex-col items-center md:items-start gap-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-black-secondary text-center md:text-left">
+            <h4 class="text-3xl md:text-4xl text-center md:text-left font-semibold text-black-secondary uppercase tracking-wide">
                 Why Choose <span class="text-red-secondary">Websolvit</span>
-            </h2>
+            </h4>
 
-            <p class="text-black-secondary mt-4 max-w-2xl mx-auto text-base md:text-lg text-center md:text-left">
+            <p class="text-black-secondary max-w-2xl mx-auto text-base md:text-lg text-center md:text-left">
                 We focus on building digital solutions that are not just beautiful,
                 but measurable, scalable, and result-driven.
             </p>

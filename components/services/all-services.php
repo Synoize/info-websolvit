@@ -270,9 +270,15 @@ $services = [
     <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col">
 
         <!-- Heading -->
-        <h2 class="text-3xl md:text-5xl text-center md:text-left font-bold text-black-secondary mb-8">
-            Our <span class="text-red-secondary">Services</span>
-        </h2>
+        <div class="text-center md:text-left mb-12">
+            <h4 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase tracking-wide">
+                Our <span class="text-red-secondary">Service's</span>
+            </h4>
+
+            <h2 class="text-xl md:text-2xl leading-snug mt-4 text-black-secondary">
+                Smart digital solutions for modern businesses.
+            </h2>
+        </div>
 
         <!-- Filters -->
         <!-- <div class="flex flex-wrap gap-3 mb-8">
@@ -312,7 +318,7 @@ $services = [
                     </div>
 
                     <!-- Title -->
-                    <h3 class="mt-4 text-lg font-semibold text-black line-clamp-2">
+                    <h3 class="mt-4 text-lg font-semibold text-black line-clamp-1">
                         <?= $service['title']; ?>
                     </h3>
 
