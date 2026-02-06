@@ -180,7 +180,7 @@ $services = [
                     </ul>
 
                     <!-- CTA -->
-                    <a href="<?= url('services/' . $service['category']); ?>"
+                    <a href="<?= url('services/' . $service['title']); ?>"
                         class="group flex items-center justify-center gap-2 px-5 mt-4 font-semibold !text-white bg-red-primary/80 py-3 rounded-lg hover:bg-red-primary/90 transition-all duration-300">
                         Know More
                         <i data-lucide="arrow-right"
