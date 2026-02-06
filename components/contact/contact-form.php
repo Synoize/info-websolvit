@@ -7,9 +7,9 @@
             <h2 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase">
                 Contact <span class="text-red-secondary">Us</span>
             </h2>
-            <p class="mt-4 max-w-2xl mx-auto text-black-secondary text-base md:text-lg">
+            <h2 class="max-w-2xl mx-auto text-xl md:text-2xl leading-snug mt-4 text-black-secondary">
                 Tell us about your idea and we’ll help you turn it into a powerful digital solution.
-            </p>
+            </h2>
         </div>
 
         <!-- Content -->

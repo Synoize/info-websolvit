@@ -330,13 +330,12 @@ $services = [
                             <li class="flex items-center gap-2 text-secondary-black">
                                 <i data-lucide="check" class="w-4 h-4 text-green-600"></i>
                                 <p class="line-clamp-1"><?= $feature; ?></p>
-
                             </li>
                         <?php } ?>
                     </ul>
 
                     <!-- CTA -->
-                    <a href="<?= url('services/' . $service['category']); ?>"
+                    <a href="<?= url('services/' . $service['title']); ?>"
                         class="group flex items-center justify-center gap-2 px-5 mt-4 font-semibold !text-white bg-red-primary/80 py-3 rounded-lg hover:bg-red-primary/90 transition-all duration-300">
                         Know More
                         <i data-lucide="arrow-right"

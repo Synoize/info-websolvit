@@ -46,9 +46,9 @@ $timelineEvents = [
             <h2 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase">
                 What We <span class="text-red-secondary">Do</span>
             </h2>
-            <p class="mt-4 max-w-2xl mx-auto text-black-secondary text-base md:text-lg">
-                End-to-end digital solutions to help your business grow faster and smarter.
-            </p>
+            <h2 class="max-w-2xl mx-auto text-xl md:text-2xl leading-snug mt-4 text-black-secondary">
+                 End-to-end digital solutions to help your business grow faster and smarter.
+            </h2>
         </div>
 
         <!-- Timeline -->

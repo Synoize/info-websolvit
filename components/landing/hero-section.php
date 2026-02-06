@@ -41,7 +41,7 @@ $slides = [
 
                             <a href="<?= url('contact'); ?>"
                                 class="group mt-6 flex items-center gap-2 px-5 py-3 rounded-full !text-white
-                                bg-[#0A66C2] hover:bg-[#0A66C2]/90 transition">
+                                bg-blue-600 hover:bg-blue-600/90 transition">
                                 <span class="text-xs">Connect with an Expert</span>
                                 <i data-lucide="arrow-right"
                                     class="w-4 h-4 group-hover:translate-x-1 transition"></i>

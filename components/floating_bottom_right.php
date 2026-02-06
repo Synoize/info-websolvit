@@ -1,5 +1,5 @@
 <div class="fixed right-2 md:right-6 bottom-20 md:bottom-14 flex flex-col items-center gap-6 z-50">
-    <a href="https://wa.me/917249899056?text=Hi,%20I%20am%20interested%20in%20Websolvit's Services.%0APlease%20share%20more%20details."
+    <a href="tel:+919876543210"
         target="_blank">
 
         <button class="w-22 h-22 md:w-24 md:h-24 cursor-pointer">

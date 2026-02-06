@@ -98,7 +98,7 @@
                 <div class="grid grid-cols-3 gap-10 text-sm text-black-secondary">
 
                     <a href="<?= url('info'); ?>">About Websolvit</a>
-                    <a href="<?= url('blog'); ?>">Blog & Insights</a>
+                    <a href="<?= url('blogs'); ?>">Blog & Insights</a>
                     <a href="<?= url('careers'); ?>">Careers</a>
                     <a href="<?= url('testimonials'); ?>">Client Testimonials</a>
                     <a href="<?= url('contact'); ?>">Contact Us</a>

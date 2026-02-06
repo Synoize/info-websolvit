@@ -42,9 +42,9 @@ $timelineEvents = [
             <h2 class="text-3xl md:text-4xl font-semibold text-black-secondary uppercase">
                 Why Join Our <span class="text-red-secondary">Global Team</span>
             </h2>
-            <p class="mt-4 max-w-2xl mx-auto text-black-secondary text-base md:text-lg">
+            <h2 class="max-w-2xl mx-auto text-xl md:text-2xl leading-snug mt-4 text-black-secondary">
                 Build your career with a global-first team that values growth, flexibility, and innovation.
-            </p>
+            </h2>
         </div>
 
         <!-- Timeline -->
