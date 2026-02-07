@@ -3,6 +3,7 @@ $services = [
 
     [
         "img" => "assets/projects/websites/_1.png",
+        "link"=> "small_business_website",
         "title" => "Small Business Website",
         "category" => "website",
         "features" => [
@@ -16,6 +17,7 @@ $services = [
 
     [
         "img" => "assets/projects/websites/_1.png",
+        "link"=> "business_website",
         "title" => "Business Website",
         "category" => "website",
         "features" => [
@@ -335,7 +337,7 @@ $services = [
                     </ul>
 
                     <!-- CTA -->
-                    <a href="<?= url('services/' . $service['title']); ?>"
+                    <a href="<?= url('services/' . $service['link']); ?>"
                         class="group flex items-center justify-center gap-2 px-5 mt-4 font-semibold !text-white bg-red-primary/80 py-3 rounded-lg hover:bg-red-primary/90 transition-all duration-300">
                         Know More
                         <i data-lucide="arrow-right"

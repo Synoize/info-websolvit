@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // 2) ENVIRONMENT SETTINGS
 
-define("APP_ENV", "development"); // development | production
+define("APP_ENV", "production"); // development | production
 
 if (APP_ENV === "development") {
     error_reporting(E_ALL);
