@@ -3,6 +3,7 @@ $services = [
 
     [
         "img" => "assets/projects/websites/_1.png",
+        "link"=> "small_business_website",
         "title" => "Small Business Website",
         "category" => "website",
         "features" => [
@@ -16,6 +17,7 @@ $services = [
 
     [
         "img" => "assets/projects/websites/_1.png",
+        "link"=> "business_website",
         "title" => "E-Commerce Website",
         "category" => "ecommerce",
         "features" => [
@@ -29,6 +31,7 @@ $services = [
 
     [
         "img" => "assets/projects/seo/seo.png",
+        "link"=> "search_engine_optimization",
         "title" => "Search Engine Optimization (SEO)",
         "category" => "seo",
         "features" => [
@@ -42,6 +45,7 @@ $services = [
 
     [
         "img" => "assets/projects/marketing/social-media.png",
+        "link"=> "social_media_marketing",
         "title" => "Social Media Marketing",
         "category" => "marketing",
         "features" => [
@@ -55,6 +59,7 @@ $services = [
 
     [
         "img" => "assets/projects/ads/lead-generation.png",
+        "link"=> "lead_generation",
         "title" => "Lead Generation",
         "category" => "advertising",
         "features" => [
@@ -68,6 +73,7 @@ $services = [
 
     [
         "img" => "assets/projects/ads/paid-ads.png",
+        "link"=> "paid_advertising",
         "title" => "Paid Advertising",
         "category" => "advertising",
         "features" => [
@@ -81,6 +87,7 @@ $services = [
 
     [
         "img" => "assets/projects/design/graphic.png",
+        "link"=> "graphic_design",
         "title" => "Graphic Design",
         "category" => "design",
         "features" => [
@@ -94,6 +101,7 @@ $services = [
 
     [
         "img" => "assets/projects/dev/software.png",
+        "link"=> "software_and_app_development",
         "title" => "Software & App Development",
         "category" => "development",
         "features" => [
@@ -180,7 +188,7 @@ $services = [
                     </ul>
 
                     <!-- CTA -->
-                    <a href="<?= url('services/' . $service['title']); ?>"
+                    <a href="<?= url('services/' . $service['link']); ?>"
                         class="group flex items-center justify-center gap-2 px-5 mt-4 font-semibold !text-white bg-red-primary/80 py-3 rounded-lg hover:bg-red-primary/90 transition-all duration-300">
                         Know More
                         <i data-lucide="arrow-right"

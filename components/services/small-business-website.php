@@ -226,7 +226,7 @@
         </div>
     </div>
 </section>
-<section class="w-full bg-slate-50 py-16">
+<section class="w-full bg-white-secondary/10 py-12">
     <div class="max-w-6xl mx-auto px-4 md:px-10">
 
         <h2 class="text-3xl md:text-4xl font-bold text-black-secondary text-center mb-12">
@@ -270,7 +270,7 @@
         </div>
     </div>
 </section>
-<section id="pricing" class="w-full !bg-white py-16">
+<section id="pricing" class="w-full !bg-white py-12 md:py-20">
     <div class="max-w-6xl mx-auto px-4 md:px-10 text-center flex flex-col justify-center items-center">
 
         <h2 class="text-3xl font-semibold text-black-secondary">

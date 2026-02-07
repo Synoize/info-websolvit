@@ -31,28 +31,28 @@
 
                     <div>
                         <label class="text-sm font-medium text-black-secondary">Full Name</label>
-                        <input type="text" name="name" required
+                        <input type="text" name="name" placeholder="Your name" required
                             class="mt-2 w-full px-4 py-2 rounded-md border border-white-secondary
                             focus:outline-none focus:border focus:border-red-secondary">
                     </div>
 
                     <div>
                         <label class="text-sm font-medium text-black-secondary">Email Address</label>
-                        <input type="email" name="email" required
+                        <input type="email" name="email" placeholder="Your email"
                             class="mt-2 w-full px-4 py-2 rounded-md border border-white-secondary
                             focus:outline-none focus:border focus:border-red-secondary">
                     </div>
 
                     <div>
                         <label class="text-sm font-medium text-black-secondary">Phone Number</label>
-                        <input type="tel" name="phone"
+                        <input type="tel" name="phone" placeholder="Your phone" required
                             class="mt-2 w-full px-4 py-2 rounded-md border border-white-secondary
                             focus:outline-none focus:border focus:border-red-secondary">
                     </div>
 
                     <div>
                         <label class="text-sm font-medium text-black-secondary">Message</label>
-                        <textarea name="message" rows="3" required
+                        <textarea name="message" rows="3" placeholder="Briefly explain about your query" required
                             class="mt-2 w-full px-4 py-2 rounded-md border border-white-secondary
                             focus:outline-none focus:border focus:border-red-secondary"></textarea>
                     </div>

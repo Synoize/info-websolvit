@@ -174,6 +174,7 @@ $services = [
 
     [
         "img" => "assets/projects/ads/lead-generation.png",
+        "link" => "lead_generation",
         "title" => "Lead Generation",
         "category" => "advertising",
         "features" => [
@@ -187,6 +188,7 @@ $services = [
 
     [
         "img" => "assets/projects/ads/paid-ads.png",
+        "link" => "paid_advertising",
         "title" => "Paid Advertising",
         "category" => "advertising",
         "features" => [
@@ -200,6 +202,7 @@ $services = [
 
     [
         "img" => "assets/projects/ads/ppc.png",
+        "link"=> "ppc_marketing_consulting",
         "title" => "PPC Marketing & Consulting",
         "category" => "ppc",
         "features" => [
@@ -213,6 +216,7 @@ $services = [
 
     [
         "img" => "assets/projects/design/graphic.png",
+        "link"=> "graphic_design",
         "title" => "Graphic Design",
         "category" => "design",
         "features" => [
@@ -226,6 +230,7 @@ $services = [
 
     [
         "img" => "assets/projects/dev/software.png",
+        "link"=> "software_and_app_development",
         "title" => "Software & App Development",
         "category" => "development",
         "features" => [
@@ -239,6 +244,7 @@ $services = [
 
     [
         "img" => "assets/projects/optimization/cro.png",
+        "link" => "conversion_rate_ptimisation",
         "title" => "Conversion Rate Optimisation (CRO)",
         "category" => "optimization",
         "features" => [
