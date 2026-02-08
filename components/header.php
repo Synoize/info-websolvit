@@ -1,78 +1,107 @@
-<!-- HEADER -->
-<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
-
-  <div class="flex items-center justify-center text-center bg-red-primary/80 text-white p-2 overflow-hidden h-10 text-xs md:text-sm">
-    <p id="announcementText"
-      class="transition-all duration-500 translate-y-6 opacity-0">
-    </p>
-  </div>
-
-  <div class="h-18 md:h-20 flex items-center justify-between px-4 md:px-[5%] py-3">
+<header id="header" class="w-full transition-all duration-300 border-t-4 border-red-primary/90">
+  <!-- Main Navbar -->
+  <div class="max-w-7xl mx-auto flex items-center justify-between md:py-4 p-6">
 
     <!-- Logo -->
-    <a href="<?= url(''); ?>">
-      <img src="<?= asset('public/logo.png'); ?>" alt="Websolvit" class="h-10 md:h-12">
+    <a href="/">
+      <img src="<?= asset('public/logo.png'); ?>" alt="Synoize" class="h-8">
     </a>
 
-    <!-- Desktop Navigation Menu Section Start -->
-    <?php include 'nav_menu.php' ?>
-    <!-- Desktop Navigation Menu Section End-->
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex items-center gap-8 bg-white-secondary/5 text-black-secondary backdrop-blur-xl uppercase px-10 py-3 text-sm rounded-full shadow">
+      <!-- Navigation Menu Start -->
+      <?php include 'nav_menu.php' ?>
+      <!-- Navigation Menu End-->
+    </nav>
 
-    <!-- Right -->
-    <div class="flex items-center gap-4 text-sm text-nowrap">
-      <a href="<?= url('contact'); ?>"
-        class="group flex items-center gap-2 px-5 md:px-6 py-3 rounded-full !text-white
-               bg-[#0A66C2] hover:bg-[#0A66C2]/90 transition-all duration-300">
-        <span class="text-xs">GET A QUOTE</span>
-        <i data-lucide="arrow-right"
-          class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
-      </a>
-    </div>
+    <!-- Contact Button -->
+    <a href="<?= url('contact'); ?>"
+      class="group hidden md:flex items-center self-center gap-2 px-6 py-3 rounded-full text-xs border border-black-secondary  text-black-secondary hover:bg-black-secondary hover:!text-white transition-all duration-300 uppercase">
+      Contact Us
+      <i data-lucide="arrow-right"
+        class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+    </a>
 
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-2xl" onclick="openMenu()"><i data-lucide="menu" class="text-black-secondary"></i></button>
   </div>
 </header>
+
+<!-- Spacer (prevents jump when header becomes fixed) -->
+<div id="headerSpacer"></div>
+
+<!-- Overlay -->
+<div id="overlay"
+  onclick="closeMenu()"
+  class="fixed inset-0 bg-black-secondary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+</div>
+
+<!-- Mobile Slide Menu -->
+<div id="mobileMenu"
+  class="fixed top-0 left-0 h-full w-72 !bg-white z-50
+            -translate-x-full transition-transform duration-300 ease-in-out
+            shadow-xl">
+
+  <div class="p-6 flex items-center justify-between border-b">
+    <span>
+      <img src="<?= asset('public/logo.png'); ?>" alt="Synoize" class="h-8">
+    </span>
+    <button onclick="closeMenu()" class="text-2xl">
+      <i data-lucide="x" class="text-black-secondary"></i>
+    </button>
+  </div>
+
+  <nav class="p-6 flex flex-col gap-5 justify-start items-start text-black-secondary uppercase">
+    <!-- Navigation Menu Start -->
+    <?php include 'nav_menu.php' ?>
+    <!-- Navigation Menu End-->
+
+     <!-- Contact Button -->
+    <a href="<?= url('contact'); ?>"
+      class="group inline-flex items-center self-center gap-2 px-6 py-3 mt-12 rounded-full text-xs border border-black-secondary  text-black-secondary hover:bg-black-secondary hover:!text-white transition-all duration-300 uppercase">
+      Contact Us
+      <i data-lucide="arrow-right"
+        class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+    </a>
+  </nav>
+</div>
+
+<!-- Scripts -->
 <script>
-  const announcements = [
-    // General
-    "Grow Your Business with Websolvit",
-    "Result-Driven Digital Marketing Agency",
+  const menu = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("overlay");
+  const header = document.getElementById("header");
+  const spacer = document.getElementById("headerSpacer");
 
-    // Offers
-    "🎉 New Client Offer: Get Free Strategy Call",
-    "🔥 Flat 20% OFF on Digital Marketing Services",
-
-    // Festivals / Occasions
-    "🪔 Diwali Special Marketing Packages Available",
-    "🎄 Christmas Campaigns Now Live",
-    "🎊 New Year Growth Plans for 2026",
-
-    // Launch / Updates
-    "🚀 Now Offering AI-Powered Marketing Solutions",
-    "📈 Boost Leads, Traffic & Conversions Faster"
-  ];
-
-  let index = 0;
-  const textEl = document.getElementById("announcementText");
-
-  function showNextText() {
-    // Move up & fade out
-    textEl.classList.add("translate-y-6", "opacity-0");
-
-    setTimeout(() => {
-      textEl.textContent = announcements[index];
-      index = (index + 1) % announcements.length;
-
-      // Reset position
-      textEl.classList.remove("translate-y-6");
-      textEl.classList.add("-translate-y-6");
-
-      requestAnimationFrame(() => {
-        textEl.classList.remove("-translate-y-6", "opacity-0");
-        textEl.classList.add("translate-y-0", "opacity-100");
-      });
-    }, 300);
+  function openMenu() {
+    menu.classList.remove("-translate-x-full");
+    overlay.classList.remove("opacity-0", "pointer-events-none");
+    document.body.classList.add("overflow-hidden");
   }
 
-  showNextText();
-  setInterval(showNextText, 3000);
+  function closeMenu() {
+    menu.classList.add("-translate-x-full");
+    overlay.classList.add("opacity-0", "pointer-events-none");
+    document.body.classList.remove("overflow-hidden");
+  }
+
+  // Sticky + Blur Header
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+      const height = header.offsetHeight;
+      spacer.style.height = height + "px";
+
+      header.classList.add(
+        "fixed", "top-0", "left-0", "z-50",
+        "bg-white/70", "backdrop-blur-md", "shadow-sm"
+      );
+    } else {
+      spacer.style.height = "0px";
+
+      header.classList.remove(
+        "fixed", "top-0", "left-0", "z-50",
+        "bg-white/70", "backdrop-blur-md", "shadow-sm"
+      );
+    }
+  });
 </script>

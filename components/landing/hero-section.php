@@ -1,140 +1,59 @@
-<?php
-$slides = [
-    [
-        "img" => "assets/carousel/_1.jpg",
-        "title" => "Not Sure Which <br> Chair to Pick?",
-        "desc" => "Get expert help before you buy",
-        "align" => "between"
-    ],
-    [
-        "img" => "assets/carousel/_2.jpg",
-        "title" => "",
-        "desc" => "",
-        "align" => "end"
-    ]
-];
-?>
+<section class="w-full !bg-white py-12">
+  <div class="max-w-7xl mx-auto px-4 md:px-10 text-center">
 
-<section class="w-full">
-    <div class="relative w-full overflow-hidden">
+    <!-- Profile Image (TOP) -->
+    <div class="flex justify-center mb-6 animate-top" data-animate>
+      <img src="<?= asset('assets/images/profile-img.jpg'); ?>"
+           alt="Shivam Singh"
+           class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover shadow-md">
+    </div>
 
-        <!-- Slides -->
-        <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+    <!-- Intro (LEFT) -->
+    <p class="text-white-secondary text-base md:text-lg mb-3 font-light animate-left"
+       data-animate>
+      Hii I'm <span class="font-medium text-red-secondary">Shivam Singh</span> 👋
+    </p>
 
-            <?php foreach ($slides as $slide): ?>
-                <div class="min-w-full relative">
-                    <img src="<?= asset($slide['img']); ?>" class="w-full h-[260px] md:h-[85vh] object-cover">
+    <!-- Heading (RIGHT) -->
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight text-black-secondary animate-right"
+        data-animate>
+      Android & Web Developer <br class="hidden sm:block" />
+      Based in India.
+    </h1>
 
-                    <div class="absolute inset-0 flex items-center">
-                        <div class="p-8 md:p-20 max-w-xl h-full flex flex-col items-start justify-<?= $slide['align']; ?>">
+    <!-- Description (BOTTOM) -->
+    <p class="mt-6 text-white-secondary max-w-3xl mx-auto font-light text-sm sm:text-base md:text-lg leading-relaxed animate-bottom"
+       data-animate>
+      I am a passionate web & android developer and cybersecurity enthusiast,
+      dedicated to building scalable, efficient, and user-friendly applications
+      from Bihar, India with 2 years of experience in multiple companies.
+    </p>
 
-                            <?php if ($slide['title']): ?>
-                                <div>
-                                    <h2 class="text-2xl md:text-5xl font-bold !text-white leading-tight">
-                                        <?= $slide['title']; ?>
-                                    </h2>
-                                    <p class="mt-3 md:mt-8 text-sm md:text-lg !text-white">
-                                        <?= $slide['desc']; ?>
-                                    </p>
-                                </div>
-                            <?php endif; ?>
+    <!-- Buttons (BOTTOM) -->
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 animate-bottom"
+         data-animate>
 
-                            <a href="<?= url('contact'); ?>"
-                                class="group mt-6 flex items-center gap-2 px-5 py-3 rounded-full !text-white
-                                bg-blue-600 hover:bg-blue-600/90 transition">
-                                <span class="text-xs">Connect with an Expert</span>
-                                <i data-lucide="arrow-right"
-                                    class="w-4 h-4 group-hover:translate-x-1 transition"></i>
-                            </a>
+      <a href="<?= url('contact'); ?>"
+         class="group flex items-center self-center gap-2 px-6 py-3 rounded-full text-sm
+                !text-white bg-red-primary/70 hover:bg-red-primary/90
+                transition-all duration-300 uppercase">
+        Contact Us
+        <i data-lucide="arrow-right"
+           class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
+      </a>
 
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-
-        </div>
-
-        <!-- Arrows -->
-        <?php foreach (['left' => 'prevSlide', 'right' => 'nextSlide'] as $pos => $fn): ?>
-            <button onclick="<?= $fn; ?>()"
-                class="absolute <?= $pos; ?>-3 top-1/2 -translate-y-1/2 !bg-white w-8 h-8 md:w-10 md:h-10
-                rounded-full flex items-center justify-center shadow z-10">
-                <i data-lucide="chevron-<?= $pos; ?>" class="w-4 h-4"></i>
-            </button>
-        <?php endforeach; ?>
-
-        <!-- Dots -->
-        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-            <?php foreach ($slides as $i => $s): ?>
-                <button onclick="goToSlide(<?= $i; ?>)"
-                    class="dotSlider w-2 h-2 !bg-black/40 rounded-full"></button>
-            <?php endforeach; ?>
-        </div>
+      <a href="<?= asset('assets/resume/simple_Resume.pdf'); ?>"
+         download
+         class="group flex items-center self-center gap-2 px-6 py-3 rounded-full text-sm
+                border border-black-secondary
+                hover:!text-white hover:bg-black-secondary
+                transition-all duration-300 uppercase">
+        Download Resume
+        <i data-lucide="download"
+           class="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5"></i>
+      </a>
 
     </div>
+
+  </div>
 </section>
-
-<script>
-    const slider = document.getElementById("slider");
-    const dots = document.querySelectorAll(".dotSlider");
-
-    let currentIndex = 0;
-    const totalSlides = slider.children.length;
-    let autoplay;
-
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-        dots.forEach(dot => dot.classList.remove("!bg-slate-200"));
-        dots[currentIndex].classList.add("!bg-slate-200");
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        updateSlider();
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateSlider();
-    }
-
-    function goToSlide(index) {
-        currentIndex = index;
-        updateSlider();
-    }
-
-    // Autoplay
-    function startAutoplay() {
-        autoplay = setInterval(nextSlide, 3000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(autoplay);
-    }
-
-    startAutoplay();
-
-    // Pause on hover
-    slider.parentElement.addEventListener("mouseenter", stopAutoplay);
-    slider.parentElement.addEventListener("mouseleave", startAutoplay);
-
-    // Swipe Support (Mobile)
-    let startX = 0;
-
-    slider.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    slider.addEventListener("touchend", (e) => {
-        let endX = e.changedTouches[0].clientX;
-
-        if (startX - endX > 50) nextSlide();
-        if (endX - startX > 50) prevSlide();
-    });
-
-    updateSlider();
-</script>
-
-
-<!-- Hero Section End-->

@@ -9,10 +9,33 @@
 
 * {
   scroll-behavior: smooth;
-}
-
-body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.animate-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.animate-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.animate-top {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.animate-bottom {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.animate-show {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 0.9s ease;
 }
