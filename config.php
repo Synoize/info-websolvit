@@ -78,17 +78,4 @@ function dd($data)
     die;
 }
 
-
-// 6) OPTIONAL: AUTH HELPERS (if needed for future features)
-
-function isLoggedIn()
-{
-    return isset($_SESSION["user_id"]);
-}
-
-function requireLogin()
-{
-    if (!isLoggedIn()) {
-        redirect("auth/login");
-    }
-}
+    
