@@ -4,8 +4,10 @@ tailwind.config = {
         extend: {
             colors: {
                 red: {
-                    primary: '#a72b21',
-                    secondary: '#a72a2177',
+                    // primary: '#a72b21',
+                    // secondary: '#a72a2177',
+                    primary: '#2b2857',
+                    secondary: '#2b2857',
                 },
                 blue: {
                     primary: '#2b2857',
