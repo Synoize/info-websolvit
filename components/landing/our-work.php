@@ -1,14 +1,14 @@
 <?php
 $projects = [
     [
-        "img" => "assets/projects/websites/_1.png",
+        "img" => "assets\projects\mosqiutpnet.png",
         "title" => "Mosquito Net Business Website",
         "description" => "Responsive website designed for an Indian mosquito net manufacturer with lead-focused UI.",
         "category" => "website",
         "tags" => ["Website", "UI/UX", "Responsive"],
     ],
     [
-        "img" => "assets/projects/websites/_1.png",
+        "img" => "assets\services\Seo.png",
         "title" => "Local SEO Growth Project",
         "description" => "Improved Google rankings and local visibility for a service-based business.",
         "category" => "seo",
