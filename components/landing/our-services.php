@@ -2,7 +2,7 @@
 $services = [
 
     [
-        "img" => "assets/projects/websites/_1.png",
+        "img" => "assets/services/small-business.png",
         "link"=> "small_business_website",
         "title" => "Small Business Website",
         "category" => "website",
@@ -16,7 +16,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/websites/_1.png",
+        "img" => "assets/services/commerce-business.png",
         "link"=> "business_website",
         "title" => "E-Commerce Website",
         "category" => "ecommerce",
@@ -30,7 +30,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/seo/seo.png",
+        "img" => "assets/services/Seo.png",
         "link"=> "search_engine_optimization",
         "title" => "Search Engine Optimization (SEO)",
         "category" => "seo",
@@ -44,7 +44,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/marketing/social-media.png",
+        "img" => "assets\services\social-media-marketing.png",
         "link"=> "social_media_marketing",
         "title" => "Social Media Marketing",
         "category" => "marketing",
@@ -58,7 +58,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/ads/lead-generation.png",
+        "img" => "assets\services\lead-generation.png",
         "link"=> "lead_generation",
         "title" => "Lead Generation",
         "category" => "advertising",
@@ -72,7 +72,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/ads/paid-ads.png",
+        "img" => "assets\services\paid-adversing.png",
         "link"=> "paid_advertising",
         "title" => "Paid Advertising",
         "category" => "advertising",
@@ -86,7 +86,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/design/graphic.png",
+        "img" => "assets\services\graphic-design.png",
         "link"=> "graphic_design",
         "title" => "Graphic Design",
         "category" => "design",
@@ -100,7 +100,7 @@ $services = [
     ],
 
     [
-        "img" => "assets/projects/dev/software.png",
+        "img" => "assets\services\software-development.png",
         "link"=> "software_and_app_development",
         "title" => "Software & App Development",
         "category" => "development",
