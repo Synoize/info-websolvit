@@ -1,39 +1,74 @@
 <?php
 $projects = [
     [
-        "img" => "assets\projects\mosqiutpnet.png",
-        "title" => "Mosquito Net Business Website",
-        "description" => "Responsive website designed for an Indian mosquito net manufacturer with lead-focused UI.",
-        "category" => "website",
-        "tags" => ["Website", "UI/UX", "Responsive"],
-    ],
-    [
-        "img" => "assets\services\Seo.png",
-        "title" => "Local SEO Growth Project",
-        "description" => "Improved Google rankings and local visibility for a service-based business.",
+        "img" => "assets\projects\mobilerepair.png",
+        "title" => "ElectroWorks India",
+        "description" => "Electronics manufacturing company specializing in innovative product solutions.",
         "category" => "seo",
-        "tags" => ["SEO", "Local SEO", "Google Ranking"],
+        "tags" => ["Electronics", "Manufacturer", "Product-Based"],
     ],
     [
-        "img" => "assets/projects/websites/_1.png",
-        "title" => "Brand Identity & Creatives",
-        "description" => "Custom social media creatives and brand design for consistent online presence.",
-        "category" => "graphic",
-        "tags" => ["Graphic Design", "Branding", "Creatives"],
-    ],
-    [
-        "img" => "assets/projects/websites/_1.png",
-        "title" => "Social Media Marketing Campaign",
-        "description" => "Lead generation campaign using Instagram and Facebook ads with high ROI.",
-        "category" => "marketing",
-        "tags" => ["Social Media", "Ads", "Lead Generation"],
-    ],
-    [
-        "img" => "assets/projects/websites/_1.png",
-        "title" => "Corporate Business Website",
-        "description" => "Modern corporate website focused on trust, conversions, and performance.",
+        "img" => "assets\projects\mosqiutpnet.png",
+        "title" => "Mosquito Net",
+        "description" => "Manufacturer of mosquito protection nets focused on safety and durability.",
         "category" => "website",
-        "tags" => ["Website", "Corporate", "Performance"],
+        "tags" => ["Electronics", "Mosquito Net", "Product-Based"],
+    ],
+    [
+        "img" => "assets/projects/healthpro.png",
+        "title" => "HealthPro Medical Labs",
+        "description" => "Medical equipment provider delivering reliable healthcare solutions.",
+        "category" => "website",
+        "tags" => ["Medical", "Equipment", "Product-Based"],
+    ],
+    [
+        "img" => "assets/projects/carle.png",
+        "title" => "Rachna Elevator",
+        "description" => "Elevator manufacturing company focused on safety and modern infrastructure.",
+        "category" => "seo",
+        "tags" => ["Electronics", "Elevator", "Manufacturer"],
+    ],
+    [
+        "img" => "assets/projects/gauseva.png",
+        "title" => "Gau Seva Shibhir",
+        "description" => "NGO initiative focused on animal welfare and community service.",
+        "category" => "website",
+        "tags" => ["NGO", "Service", "Community"],
+    ],
+    [
+        "img" => "assets/projects/jai.png",
+        "title" => "Jai Ambay Etching",
+        "description" => "Professional etching services with a strong digital presence.",
+        "category" => "website",
+        "tags" => ["Web Design", "Agency", "Service-Based"],
+    ],
+    [
+        "img" => "assets\projects\pigeon.png",
+        "title" => "Pigeon Net",
+        "description" => "Protective net solutions for residential and commercial spaces.",
+        "category" => "website",
+        "tags" => ["Service", "Net Solutions", "Product-Based"],
+    ],
+    [
+        "img" => "assets\projects\alfa-tower-company.png",
+        "title" => "Alpha Tower Company",
+        "description" => "Tower installation company offering reliable infrastructure services.",
+        "category" => "website",
+        "tags" => ["Web Design", "Installation", "Service-Based"],
+    ],
+    [
+        "img" => "assets\projects\marketedge.png",
+        "title" => "MarketEdge Agency",
+        "description" => "Digital marketing agency helping brands grow online visibility.",
+        "category" => "website",
+        "tags" => ["Marketing", "Digital", "Agency"],
+    ],
+    [
+        "img" => "assets\projects\academy.png",
+        "title" => "EduSmart Academy",
+        "description" => "Online education platform providing modern learning solutions.",
+        "category" => "website",
+        "tags" => ["Education", "Online", "Service-Based"],
     ],
 ];
 ?>
@@ -78,7 +113,7 @@ $projects = [
 
                     <div class="bg-white-secondary/10 rounded-2xl overflow-hidden h-[180px] sm:h-[260px] flex items-center justify-center">
                         <img src="<?= asset($project['img']); ?>"
-                            class="w-full h-full object-contain group-hover:scale-105 transition duration-500"
+                            class="w-full h-full object-contain group-hover:scale-105 p-6 transition duration-500"
                             alt="<?= $project['title']; ?>">
                     </div>
 
@@ -140,74 +175,64 @@ $projects = [
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("ourWorkScroll");
 
-    const filterButtons = document.querySelectorAll(".filterBtn");
-    const projectItems = document.querySelectorAll(".projectItem");
-    const ourWorkScroll = document.getElementById("ourWorkScroll");
+    let scrollSpeed = 1; // speed (increase for faster)
+    let autoScroll;
 
-    /* ---------------- FILTER LOGIC ---------------- */
-    filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
+    function startAutoScroll() {
+        autoScroll = setInterval(() => {
+            container.scrollLeft += scrollSpeed;
 
-            // active button
-            filterButtons.forEach(b => b.classList.remove("active-filter"));
-            btn.classList.add("active-filter");
+            // loop back to start smoothly
+            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+                container.scrollLeft = 0;
+            }
+        }, 20);
+    }
 
-            const filter = btn.dataset.filter;
+    function stopAutoScroll() {
+        clearInterval(autoScroll);
+    }
 
-            projectItems.forEach(item => {
-                const category = item.dataset.category;
+    // Start auto scroll
+    startAutoScroll();
 
-                if (filter === "all" || category === filter) {
-                    item.classList.remove("hidden-item");
-                } else {
-                    item.classList.add("hidden-item");
-                }
-            });
+    // Pause on hover (for better UX)
+    container.addEventListener("mouseenter", stopAutoScroll);
+    container.addEventListener("mouseleave", startAutoScroll);
 
-            // reset scroll after filtering
-            ourWorkScroll.scrollLeft = 0;
-        });
-    });
-
-    /* ---------------- DRAG SCROLL ---------------- */
+    // Allow manual scroll (mouse/touch)
     let isDown = false;
     let startX;
     let scrollLeft;
-    let moved = false;
 
-    ourWorkScroll.classList.add("cursor-grab");
-
-    ourWorkScroll.addEventListener("mousedown", e => {
+    container.addEventListener("mousedown", (e) => {
         isDown = true;
-        moved = false;
-        startX = e.pageX - ourWorkScroll.offsetLeft;
-        scrollLeft = ourWorkScroll.scrollLeft;
-        ourWorkScroll.classList.add("cursor-grabbing");
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        stopAutoScroll();
     });
 
-    ourWorkScroll.addEventListener("mousemove", e => {
+    container.addEventListener("mouseleave", () => {
+        isDown = false;
+        startAutoScroll();
+    });
+
+    container.addEventListener("mouseup", () => {
+        isDown = false;
+        startAutoScroll();
+    });
+
+    container.addEventListener("mousemove", (e) => {
         if (!isDown) return;
-        const x = e.pageX - ourWorkScroll.offsetLeft;
-        const walk = x - startX;
-        if (Math.abs(walk) > 5) moved = true;
-        ourWorkScroll.scrollLeft = scrollLeft - walk;
-    });
-
-    ["mouseup", "mouseleave"].forEach(evt => {
-        ourWorkScroll.addEventListener(evt, () => {
-            isDown = false;
-            ourWorkScroll.classList.remove("cursor-grabbing");
-        });
-    });
-
-    /* ---------------- WHEEL SCROLL (ONLY DESKTOP) ---------------- */
-    ourWorkScroll.addEventListener("wheel", e => {
-        if (window.innerWidth < 640) return; // grid mode
         e.preventDefault();
-        ourWorkScroll.scrollLeft += e.deltaY;
-    }, { passive: false });
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2; // drag speed
+        container.scrollLeft = scrollLeft - walk;
+    });
 
-});
+    // Touch support (mobile)
+    container.addEventListener("touchstart", stopAutoScroll);
+    container.addEventListener("touchend", startAutoScroll);
 </script>

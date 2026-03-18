@@ -22,27 +22,27 @@
                         <div>
                             <h4 class="mb-3 text-black-secondary text-lg">SEO & Growth</h4>
                             <ul class="space-y-2 text-sm text-black-secondary">
-                                <li>Search Engine Optimization</li>
-                                <li>Local SEO</li>
-                                <li>Website Audit</li>
+                               <li><a href="<?= url('services/seo'); ?>" class="hover:text-red-secondary">Search Engine Optimization</a></li>
+                               <li><a href="<?= url('services/local-seo'); ?>" class="hover:text-red-secondary">Local SEO</a></li>
+                               <li><a href="<?= url('services/website-audit'); ?>" class="hover:text-red-secondary">Website Audit</a></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 class="mb-3 text-black-secondary text-lg">Paid Marketing</h4>
                             <ul class="space-y-2 text-sm text-black-secondary">
-                                <li>Google Ads</li>
-                                <li>Meta Ads (Facebook & Instagram)</li>
-                                <li>Lead Generation Campaigns</li>
+                                <li><a href="<?= url('services/google-ads'); ?>" class="hover:text-red-secondary">Google Ads</a></li>
+                                <li><a href="<?= url('services/meta-ads'); ?>" class="hover:text-red-secondary">Meta Ads (Facebook & Instagram)</a></li>
+                                <li><a href="<?= url('services/lead-generation'); ?>" class="hover:text-red-secondary">Lead Generation Campaigns</a></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 class="mb-3 text-black-secondary text-lg">Social & Content</h4>
                             <ul class="space-y-2 text-sm text-black-secondary">
-                                <li>Social Media Marketing</li>
-                                <li>Content Marketing</li>
-                                <li>Brand Strategy</li>
+                                <li><a href="<?= url('services/social-media-marketing'); ?>" class="hover:text-red-secondary">Social Media Marketing</a></li>
+                                <li><a href="<?= url('services/content-marketing'); ?>" class="hover:text-red-secondary">Content Marketing</a></li>
+                                <li><a href="<?= url('services/brand-strategy'); ?>" class="hover:text-red-secondary">Brand Strategy</a></li>
                             </ul>
                         </div>
 

@@ -1,52 +1,41 @@
 <?php
-$services = [
+$services =  [
 
+  
     [
-        "img" => "assets/services/small-business.png",
-        "link"=> "small_business_website",
-        "title" => "Small Business Website",
-        "category" => "website",
+        "img" => "assets\services\software-development.png",
+        "title" => "Web Development",
+        "link"=> "web_development",
+        "category" => "development",
         "features" => [
-            "Professional Business Design",
-            "Mobile Responsive Layout",
-            "Fast & Secure Website"
+            "Custom Development",
+            "Fast Loading Code",
+            "Scalable Architecture"
         ],
-        "off" => "30%",
-        "badge" => "Popular",
+        "off" => "20%",
+        "badge" => "",
     ],
 
-    [
-        "img" => "assets/services/commerce-business.png",
-        "link"=> "business_website",
-        "title" => "E-Commerce Website",
-        "category" => "ecommerce",
-        "features" => [
-            "Product & Cart System",
-            "Secure Payment Gateway",
-            "Order Management"
-        ],
-        "off" => "30%",
-        "badge" => "High ROI",
-    ],
 
     [
-        "img" => "assets/services/Seo.png",
-        "link"=> "search_engine_optimization",
-        "title" => "Search Engine Optimization (SEO)",
+        "img" => "assets\services\local-seo.png",
+        "title" => "Local SEO Services",
+        "link"=> "local_seo_services",
         "category" => "seo",
         "features" => [
-            "On-Page & Technical SEO",
-            "Keyword Ranking Growth",
-            "Organic Traffic Boost"
+            "Local Keyword Rankings",
+            "Map Pack Optimization",
+            "Nearby Customer Reach"
         ],
-        "off" => "25%",
-        "badge" => "Best Seller",
+        "off" => "30%",
+        "badge" => "Local SEO",
     ],
+
 
     [
         "img" => "assets\services\social-media-marketing.png",
-        "link"=> "social_media_marketing",
         "title" => "Social Media Marketing",
+        "link"=> "social-media-marketing",
         "category" => "marketing",
         "features" => [
             "Content Creation",
@@ -56,10 +45,10 @@ $services = [
         "off" => "35%",
         "badge" => "High ROI",
     ],
-
+    
     [
         "img" => "assets\services\lead-generation.png",
-        "link"=> "lead_generation",
+        "link" => "lead_generation",
         "title" => "Lead Generation",
         "category" => "advertising",
         "features" => [
@@ -70,49 +59,7 @@ $services = [
         "off" => "40%",
         "badge" => "Hot Deal",
     ],
-
-    [
-        "img" => "assets\services\paid-adversing.png",
-        "link"=> "paid_advertising",
-        "title" => "Paid Advertising",
-        "category" => "advertising",
-        "features" => [
-            "Google, Meta & YouTube Ads",
-            "Audience Targeting",
-            "ROI Tracking"
-        ],
-        "off" => "35%",
-        "badge" => "High ROI",
-    ],
-
-    [
-        "img" => "assets\services\graphic-design.png",
-        "link"=> "graphic_design",
-        "title" => "Graphic Design",
-        "category" => "design",
-        "features" => [
-            "Logo & Branding",
-            "Social Media Creatives",
-            "Ad & Print Designs"
-        ],
-        "off" => "20%",
-        "badge" => "",
-    ],
-
-    [
-        "img" => "assets\services\software-development.png",
-        "link"=> "software_and_app_development",
-        "title" => "Software & App Development",
-        "category" => "development",
-        "features" => [
-            "Custom Software Solutions",
-            "Web & App Development",
-            "Secure & Scalable Code"
-        ],
-        "off" => "25%",
-        "badge" => "Custom Build",
-    ],
-
+    
 
 ];
 ?>
@@ -165,7 +112,7 @@ $services = [
                     <!-- Image -->
                     <div class="bg-white-secondary/10 rounded-2xl overflow-hidden h-[180px] sm:h-[260px] flex items-center justify-center">
                         <img src="<?= asset($service['img']); ?>"
-                            class="w-full h-full object-contain group-hover:scale-105 transition duration-500"
+                            class="w-full h-full object-contain group-hover:scale-105 transition p-6 duration-500"
                             alt="<?= $service['title']; ?>">
                     </div>
 
