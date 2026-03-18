@@ -32,6 +32,7 @@ $services = [
     [
         "img" => "assets\services\software-development.png",
         "title" => "Web Development",
+        "link"=> "web_development",
         "category" => "development",
         "features" => [
             "Custom Development",
@@ -45,6 +46,7 @@ $services = [
     [
         "img" => "assets\services\customized-website.png",
         "title" => "Customised Website",
+        "link"=> "customised_website",
         "category" => "website",
         "features" => [
             "Tailor-Made Design",
@@ -58,6 +60,7 @@ $services = [
     [
         "img" => "assets\services\commerce-business.png",
         "title" => "E-Commerce Website",
+        "link"=> "e-commerce-website",
         "category" => "ecommerce",
         "features" => [
             "Product & Cart System",
@@ -71,6 +74,7 @@ $services = [
     [
         "img" => "assets\services\seo.png",
         "title" => "Search Engine Optimization (SEO)",
+        "link"=> "seo",
         "category" => "seo",
         "features" => [
             "On-Page & Technical SEO",
@@ -84,6 +88,7 @@ $services = [
     [
         "img" => "assets\services\local-seo.png",
         "title" => "Local SEO Services",
+        "link"=> "local_seo_services",
         "category" => "seo",
         "features" => [
             "Local Keyword Rankings",
@@ -97,6 +102,7 @@ $services = [
     [
         "img" => "assets\services\google-my-business.png",
         "title" => "Google My Business (GMB) SEO",
+        "link"=> "google-my-business",
         "category" => "seo",
         "features" => [
             "GMB Profile Setup",
@@ -110,6 +116,7 @@ $services = [
     [
         "img" => "assets\services\social-media-marketing.png",
         "title" => "Social Media Marketing",
+        "link"=> "social-media-marketing",
         "category" => "marketing",
         "features" => [
             "Content Creation",
@@ -123,6 +130,7 @@ $services = [
     [
         "img" => "assets\services\content-marketing.png",
         "title" => "Content Marketing",
+        "link"=> "content-marketing",
         "category" => "marketing",
         "features" => [
             "SEO Content Writing",
@@ -136,6 +144,7 @@ $services = [
     [
         "img" => "assets\services\mail-marketing.png",
         "title" => "Email Marketing",
+        "link"=> "email_marketing",
         "category" => "marketing",
         "features" => [
             "Promotional Campaigns",
@@ -149,6 +158,7 @@ $services = [
     [
         "img" => "assets\services\sms-marketing.png",
         "title" => "SMS Marketing",
+        "link"=> "sms_marketing",
         "category" => "marketing",
         "features" => [
             "Bulk SMS Campaigns",
@@ -162,6 +172,7 @@ $services = [
     [
         "img" => "assets\services\whatsapp-marketing.png",
         "title" => "WhatsApp Marketing",
+        "link"=> "whatsapp_marketing",
         "category" => "marketing",
         "features" => [
             "Broadcast Messaging",
@@ -229,7 +240,7 @@ $services = [
     ],
 
     [
-        "img" => "assets\services\software-development.png",
+        "img" => "assets/projects/app-development.png",
         "link"=> "software_and_app_development",
         "title" => "Software & App Development",
         "category" => "development",
@@ -244,7 +255,7 @@ $services = [
 
     [
         "img" => "assets\services\cro.png",
-        "link" => "conversion_rate_ptimisation",
+        "link" => "conversion_rate_optimisation",
         "title" => "Conversion Rate Optimisation (CRO)",
         "category" => "optimization",
         "features" => [
@@ -259,6 +270,7 @@ $services = [
     [
         "img" => "assets\services\website-maintence.png",
         "title" => "Website Maintenance",
+        "link" => "website_maintenance",
         "category" => "maintenance",
         "features" => [
             "Regular Updates",
@@ -321,7 +333,7 @@ $services = [
                     <!-- Image -->
                     <div class="bg-white-secondary/10 rounded-2xl overflow-hidden h-[180px] sm:h-[260px] flex items-center justify-center">
                         <img src="<?= asset($service['img']); ?>"
-                            class="w-full h-full object-contain group-hover:scale-105 transition duration-500"
+                            class="w-full h-full object-contain group-hover:scale-105 transition p-6 duration-500"
                             alt="<?= $service['title']; ?>">
                     </div>
 

@@ -175,74 +175,64 @@ $projects = [
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("ourWorkScroll");
 
-    const filterButtons = document.querySelectorAll(".filterBtn");
-    const projectItems = document.querySelectorAll(".projectItem");
-    const ourWorkScroll = document.getElementById("ourWorkScroll");
+    let scrollSpeed = 1; // speed (increase for faster)
+    let autoScroll;
 
-    /* ---------------- FILTER LOGIC ---------------- */
-    filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
+    function startAutoScroll() {
+        autoScroll = setInterval(() => {
+            container.scrollLeft += scrollSpeed;
 
-            // active button
-            filterButtons.forEach(b => b.classList.remove("active-filter"));
-            btn.classList.add("active-filter");
+            // loop back to start smoothly
+            if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+                container.scrollLeft = 0;
+            }
+        }, 20);
+    }
 
-            const filter = btn.dataset.filter;
+    function stopAutoScroll() {
+        clearInterval(autoScroll);
+    }
 
-            projectItems.forEach(item => {
-                const category = item.dataset.category;
+    // Start auto scroll
+    startAutoScroll();
 
-                if (filter === "all" || category === filter) {
-                    item.classList.remove("hidden-item");
-                } else {
-                    item.classList.add("hidden-item");
-                }
-            });
+    // Pause on hover (for better UX)
+    container.addEventListener("mouseenter", stopAutoScroll);
+    container.addEventListener("mouseleave", startAutoScroll);
 
-            // reset scroll after filtering
-            ourWorkScroll.scrollLeft = 0;
-        });
-    });
-
-    /* ---------------- DRAG SCROLL ---------------- */
+    // Allow manual scroll (mouse/touch)
     let isDown = false;
     let startX;
     let scrollLeft;
-    let moved = false;
 
-    ourWorkScroll.classList.add("cursor-grab");
-
-    ourWorkScroll.addEventListener("mousedown", e => {
+    container.addEventListener("mousedown", (e) => {
         isDown = true;
-        moved = false;
-        startX = e.pageX - ourWorkScroll.offsetLeft;
-        scrollLeft = ourWorkScroll.scrollLeft;
-        ourWorkScroll.classList.add("cursor-grabbing");
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        stopAutoScroll();
     });
 
-    ourWorkScroll.addEventListener("mousemove", e => {
+    container.addEventListener("mouseleave", () => {
+        isDown = false;
+        startAutoScroll();
+    });
+
+    container.addEventListener("mouseup", () => {
+        isDown = false;
+        startAutoScroll();
+    });
+
+    container.addEventListener("mousemove", (e) => {
         if (!isDown) return;
-        const x = e.pageX - ourWorkScroll.offsetLeft;
-        const walk = x - startX;
-        if (Math.abs(walk) > 5) moved = true;
-        ourWorkScroll.scrollLeft = scrollLeft - walk;
-    });
-
-    ["mouseup", "mouseleave"].forEach(evt => {
-        ourWorkScroll.addEventListener(evt, () => {
-            isDown = false;
-            ourWorkScroll.classList.remove("cursor-grabbing");
-        });
-    });
-
-    /* ---------------- WHEEL SCROLL (ONLY DESKTOP) ---------------- */
-    ourWorkScroll.addEventListener("wheel", e => {
-        if (window.innerWidth < 640) return; // grid mode
         e.preventDefault();
-        ourWorkScroll.scrollLeft += e.deltaY;
-    }, { passive: false });
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2; // drag speed
+        container.scrollLeft = scrollLeft - walk;
+    });
 
-});
+    // Touch support (mobile)
+    container.addEventListener("touchstart", stopAutoScroll);
+    container.addEventListener("touchend", startAutoScroll);
 </script>

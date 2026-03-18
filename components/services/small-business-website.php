@@ -66,8 +66,8 @@
         </div>
 
         <!-- Image -->
-        <div class="flex justify-center bg-red-300">
-            <img src="../../assets/projects/websites/_1.png"
+        <div class="flex justify-center">
+            <img src="<?= asset('assets/services/small-business.png') ?>"
                 alt="Small Business Website"
                 class="w-full max-w-md">
         </div>
